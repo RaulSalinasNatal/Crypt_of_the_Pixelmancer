@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://img/titulo.png" type="Texture" id=1]
+[ext_resource path="res://scenes/levels/initialScene.gd" type="Script" id=2]
+[ext_resource path="res://scenes/levels/initalButton.gd" type="Script" id=3]
+[ext_resource path="res://img/fondo_inicio.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.411765, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.027451, 0.415686, 0.0784314, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.462745, 0.454902, 0.454902, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0745098, 0.0705882, 0.0705882, 1 )
+
+[node name="initialScene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 1023.0
+margin_bottom = 643.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="TextureRect" parent="."]
+margin_left = 7.80316
+margin_top = 33.0073
+margin_right = 581.803
+margin_bottom = 134.007
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 832.286
+margin_top = 511.45
+margin_right = 1004.29
+margin_bottom = 591.45
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "START"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

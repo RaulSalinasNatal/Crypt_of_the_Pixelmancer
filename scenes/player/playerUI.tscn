@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/player/playerUI.gd" type="Script" id=2]
+[ext_resource path="res://img/chargeBar.png" type="Texture" id=3]
+
+[node name="playerUI" type="Control"]
+margin_right = 100.0
+margin_bottom = 18.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="healthBar" type="TextureProgress" parent="."]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+margin_right = 100.0
+margin_bottom = 10.0
+value = 100.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="staminaBar" type="TextureProgress" parent="."]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+margin_top = 10.0
+margin_right = 100.0
+margin_bottom = 16.0
+value = 100.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 0.709804, 0.988235, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="attackBar" type="TextureProgress" parent="."]
+modulate = Color( 0.952941, 0.952941, 0.952941, 1 )
+margin_top = 16.0
+margin_right = 100.0
+margin_bottom = 22.0
+step = 10.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+fill_mode = 1
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0.219608, 1, 0, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
